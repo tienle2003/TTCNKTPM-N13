@@ -10,12 +10,14 @@ export default function Button({
     href,
     primary = false,
     secondary = false,
-    onClick = false,
+    normal = false,
     disabled = false,
     rounded = false,
     small = false,
     large = false,
     children,
+    className,
+    onClick = () => {},
     ...passProps
 }) {
     let Comp = 'button'
@@ -35,22 +37,24 @@ export default function Button({
     if (to) {
         Comp = Link
         props.to = to
-    }else if(href){
+    } else if (href) {
         Comp = 'a'
         props.href = href
     }
 
-    const classes = cx({
-        primary: '',
-        secondary: '',
-        rounded,
-        large,
-        small
+    const classes = cx('wrapper block', {
+        'bg-colorPrimary rounded-md text-white px-4 py-2': primary,
+        'bg-colorSecondary rounded-md text-white px-4 py-2': secondary,
+        'text-colorDark text-md': normal,
+        'rounded-full': rounded,
+        'text-xl': large,
+        'text-sm': small,
+        [className]: className,
     })
 
     return (
         <Comp className={classes} {...props}>
-            <div className={cx('')}>{children}</div>
+            <span className={cx('')}>{children}</span>
         </Comp>
     )
 }

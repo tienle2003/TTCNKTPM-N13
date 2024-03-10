@@ -1,7 +1,9 @@
 import classNames from "classnames/bind"
 
 import styles from './Header.module.css'
-import Button from "../../../components/Button"
+import HeaderControl from './HeaderControl'
+import NavMenu from "./NavMenu"
+import Search from "../Search"
 
 const cx = classNames.bind(styles)
 
@@ -9,30 +11,14 @@ export default function Header() {
     return (
         <div className="wrapper">
             <div className="container">
-                <div className={cx('header-top')}>
-                    <div>
-                        <Button to={'/'}>
-                            <span>
-                                <h1>PhongTro</h1>
-                                <h3>.com</h3>
-                            </span>
-                            <span>Kênh thông tin phòng trọ số 1 Việt Nam</span>
-                        </Button>
-                    </div>
-                    <div>
-                        <Button>
-                            <i className="fas fa-user-plus"></i>
-                            Đăng nhập
-                        </Button>
-                        <Button>
-                            <i className="fas fa-sign-in-alt"></i>
-                            Đăng ký
-                        </Button>
-                        <Button primary>
-                            Đăng tin miễn phí
-                            <i className="fas fa-plus-circle"></i>
-                        </Button>
-                    </div>
+                <div className="mb-2">
+                    <HeaderControl />
+                </div>
+                <div className={cx('mb-2 sticky top-0' )}>
+                    <NavMenu />
+                </div>
+                <div className="mb-2">
+                    <Search />
                 </div>
             </div>
         </div>

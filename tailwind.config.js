@@ -10,7 +10,8 @@ module.exports = {
         colorSecondary: '#f73859',
         colorDark: '#181c31',
         colorLight: '#fff',
-        ccc: '#ccc'
+        colorCcc: '#ccc',
+        colorYellow: '#febb02'
       }
     },
   },
