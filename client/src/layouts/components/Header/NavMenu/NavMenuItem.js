@@ -13,7 +13,7 @@ export default function NavMenuItem({ cate = {} }) {
         <div
             className={cx('wrapper hover:bg-colorSecondary', currentPage === cate.path ? 'bg-colorSecondary' : '')}
         >
-            <Button to={cate?.path} small className={'text-white font-semibold px-4 py-2'}>
+            <Button to={cate?.path} small className={'text-white font-semibold px-4 py-2 block'}>
                 {cate?.title}
             </Button>
         </div>

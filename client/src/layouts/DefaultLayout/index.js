@@ -1,12 +1,12 @@
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import WhyUs from '../components/WhyUs'
-import Contact from '../components/Contact'
+import Support from '../components/Support'
 import Footer from '../components/Footer'
 
 export default function DefaultLayout({ children }) {
     return (
-        <div className="wrapper">
+        <div className="wrapper bg-colorBgPage">
             <div className="container">
                 <div className='row'>
                     <div className='col-12'>
@@ -22,7 +22,7 @@ export default function DefaultLayout({ children }) {
                         <WhyUs />
                     </div>
                     <div className='col-12'>
-                        <Contact />
+                        <Support />
                     </div>
                     <div className='col-12'>
                         <Footer />

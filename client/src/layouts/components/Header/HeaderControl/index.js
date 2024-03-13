@@ -2,6 +2,7 @@ import classNames from "classnames/bind"
 
 import styles from './HeaderControl.module.css'
 import Button from "../../../../components/Button"
+import Logo from "../../../../components/Logo"
 import routes from '../../../../constants/routes'
 
 const cx = classNames.bind(styles)
@@ -10,13 +11,7 @@ export default function HeaderControl() {
     return (
         <div className={cx('header-top', 'flex justify-between items-center p-2')}>
             <div className="">
-                <Button to={routes.home}>
-                    <span className="flex items-end">
-                        <h1 className="text-3xl text-colorPrimary font-extrabold">PhongTro</h1>
-                        <h3 className="text-lg text-colorCcc font-semibold">.com</h3>
-                    </span>
-                    <span className="text-xs text-colorDark text-black">Kênh thông tin phòng trọ số 1 Việt Nam</span>
-                </Button>
+                <Logo />
             </div>
             <div className="flex items-center">
                 <Button normal to={routes.login} className={cx('mr-3 hover:underline px-2 py-2')}>

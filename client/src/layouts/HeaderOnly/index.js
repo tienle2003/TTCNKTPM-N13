@@ -5,7 +5,7 @@ export default function HeaderOnly({ children }) {
         <div className="wrapper">
             <div className="container">
                 <div className="">
-                    <Header />
+                    <Header onlyNavBar={true}/>
                 </div>
                 <div className=''>
                     {children}

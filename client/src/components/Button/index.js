@@ -17,7 +17,8 @@ export default function Button({
     large = false,
     children,
     className,
-    onClick = () => {},
+    style,
+    onClick = () => { },
     ...passProps
 }) {
     let Comp = 'button'
@@ -42,7 +43,7 @@ export default function Button({
         props.href = href
     }
 
-    const classes = cx('wrapper block', {
+    const classes = cx('wrapper', {
         'bg-colorPrimary rounded-md text-white px-4 py-2': primary,
         'bg-colorSecondary rounded-md text-white px-4 py-2': secondary,
         'text-colorDark text-md': normal,
@@ -53,7 +54,7 @@ export default function Button({
     })
 
     return (
-        <Comp className={classes} {...props}>
+        <Comp className={classes} {...props} style={style}>
             <span className={cx('')}>{children}</span>
         </Comp>
     )

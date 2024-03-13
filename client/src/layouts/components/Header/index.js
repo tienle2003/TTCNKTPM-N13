@@ -7,19 +7,23 @@ import Search from "../Search"
 
 const cx = classNames.bind(styles)
 
-export default function Header() {
+export default function Header({ onlyNavBar = false }) {
+
+
     return (
         <div className="wrapper">
             <div className="container">
                 <div className="mb-2">
                     <HeaderControl />
                 </div>
-                <div className={cx('mb-2 sticky top-0' )}>
+                <div className={cx('mb-2 sticky top-0 z-50',)}>
                     <NavMenu />
                 </div>
-                <div className="mb-2">
-                    <Search />
-                </div>
+                {!onlyNavBar &&
+                    <div className="mb-2">
+                        <Search />
+                    </div>
+                }
             </div>
         </div>
     )

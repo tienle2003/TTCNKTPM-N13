@@ -11,7 +11,10 @@ module.exports = {
         colorDark: '#181c31',
         colorLight: '#fff',
         colorCcc: '#ccc',
-        colorYellow: '#febb02'
+        colorYellow: '#febb02',
+        colorDadada: '#dadada',
+        colorBgPage: '#f5f5f5',
+        colorOrange: '#f60'
       }
     },
   },
